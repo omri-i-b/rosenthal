@@ -3,6 +3,8 @@
 A modern rebuild of [rosenthalcpas.com](http://rosenthalcpas.com/) for the Houston CPA
 firm Rosenthal & Co., P.C.
 
+**Live preview:** https://omrib.dev/rosenthal/ (auto-deploys from `main` via GitHub Actions → GitHub Pages)
+
 **Design direction:** editorial restraint inspired by [sequoiacap.com](https://sequoiacap.com)
 (warm ivory, elegant serif display, generous whitespace) combined with the cinematic depth
 and pill-button language of [legora.com](https://legora.com) (deep forest green, full-bleed
