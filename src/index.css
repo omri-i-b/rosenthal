@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Rosenthal & Co., P.C. — design tokens
+ * Editorial restraint (Sequoia) × cinematic depth (Legora),
+ * refined into a trustworthy, modern CPA brand.
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Brand palette */
+  --color-ink: #1a1a17;          /* near-black text */
+  --color-ink-soft: #4a4a44;     /* muted body copy */
+  --color-ivory: #f4efe6;        /* warm cream background */
+  --color-ivory-deep: #eae3d6;   /* subtle divider / band */
+  --color-paper: #fbf8f2;        /* raised surfaces */
+
+  --color-pine: #1e3a2f;         /* primary deep forest green */
+  --color-pine-700: #24483a;
+  --color-pine-600: #2e5a48;
+  --color-pine-400: #5c8271;
+  --color-moss: #8fa99a;         /* soft green accent */
+
+  --color-brass: #b08d49;        /* warm brass/gold accent */
+  --color-brass-soft: #c9ab73;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Display type helper */
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Reveal-on-scroll baseline */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.9s var(--ease-out-soft), transform 0.9s var(--ease-out-soft);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Thin uppercase eyebrow label */
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--color-pine);
+  color: var(--color-ivory);
+}
